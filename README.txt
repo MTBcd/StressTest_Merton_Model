@@ -1,11 +1,11 @@
 
-# Financial Metrics Calculator
+#Financial Metrics Calculator
 
 This project implements a financial analysis tool for calculating key metrics such as default probability, credit spreads, and recovery rates based on the Merton model. It provides functionality to analyze financial data for companies and portfolios, with interactive UI support via a Streamlit app.
 
 ---
 
-## Features
+##Features
 - **Default Probability**: Measures the likelihood of a company defaulting on its debt.
 - **Credit Spread**: Calculates the spread of corporate bonds over risk-free bonds.
 - **Recovery Rate**: Estimates the proportion of debt recovered in case of default.
@@ -14,7 +14,7 @@ This project implements a financial analysis tool for calculating key metrics su
 
 ---
 
-## Directory Structure
+##Directory Structure
 ```
 /project
 ├── app.py                    # Streamlit app for interactive analysis
@@ -30,9 +30,9 @@ This project implements a financial analysis tool for calculating key metrics su
 
 ---
 
-## How to Use
+##How to Use
 
-### 1. Requirements
+###1. Requirements
 Install the following dependencies:
 - Python 3.8 or higher
 - Required Python libraries: `streamlit`, `pandas`, `numpy`, `scipy`, `xlwings`, `openpyxl`
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 ---
 
-### 2. Running the Streamlit App
+###2. Running the Streamlit App
 1. Run the app with the following command:
    ```
    streamlit run app.py
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3. Using the Portfolio Analysis Script
+###3. Using the Portfolio Analysis Script
 The `Main.py` script reads portfolio data from an Excel file (`Data.xlsx`) and performs detailed portfolio impact analysis, including stress testing for credit spreads and portfolio repricing. To run it:
 
 1. Place your dataset in `Data.xlsx`.
@@ -78,26 +78,26 @@ The `Main.py` script reads portfolio data from an Excel file (`Data.xlsx`) and p
 
 ---
 
-## Key Components
+##Key Components
 
-### Merton Model (`Merton.py`)
+###Merton Model (`Merton.py`)
 - Implements the Merton model for credit risk analysis.
 - Functions:
   - `default_proba`: Computes default probability.
   - `credit_spread`: Calculates credit spread.
   - `recovery_rate`: Estimates recovery rate.
 
-### Portfolio Impact (`Port_Exposure.py`)
+###Portfolio Impact (`Port_Exposure.py`)
 - Calculates portfolio-level impact under stressed scenarios.
 - Uses delta multipliers for both financial and non-financial companies.
 
-### Delta Calculations (`Delta_Fin.py` and `Delta_NonFin.py`)
+###Delta Calculations (`Delta_Fin.py` and `Delta_NonFin.py`)
 - **`Delta_Fin.py`**: Handles delta calculations for financial companies.
 - **`Delta_NonFin.py`**: Handles delta calculations for non-financial companies.
 
 ---
 
-## Dependencies
+##Dependencies
 The required dependencies are listed in `requirements.txt`. Install them using:
 ```
 pip install -r requirements.txt
@@ -112,13 +112,13 @@ Key libraries include:
 
 ---
 
-## Notes
+##Notes
 - Ensure the dataset (`Data.xlsx`) is correctly formatted for portfolio analysis.
 - Adjust parameters in `app.py` and `Main.py` as needed for your specific use case.
 
 ---
 
-## Contact
+##Contact
 For questions or feedback, please reach out to the project maintainer.
 
 ---
